@@ -20,12 +20,21 @@ public class CharacterPower : MonoBehaviourPunCallbacks
     [SerializeField] float dribblingPower = 10f;
     bool touch;
 
+    
+
     public static bool isTouchBall;
 
 
     private void Start()
     {
+
+        
         pw = GetComponent<PhotonView>();
+
+        if (!pw.IsMine) //Ben deðilsem sil
+        {
+            Destroy(GetComponentInChildren<Camera>().gameObject);
+        }
     }
 
 
@@ -50,7 +59,7 @@ public class CharacterPower : MonoBehaviourPunCallbacks
         rigidbody = top.GetComponent<Rigidbody>();
         Vector3 a = new Vector3(this.transform.forward.x, 0f, this.transform.forward.z); //Topun karþýya gitmesini saðlayan z.
         rigidbody.velocity = a * dribblingPower;
-        dribbling_audio.Play();
+        //dribbling_audio.Play();
     }
 
     private void Update()
@@ -81,25 +90,19 @@ public class CharacterPower : MonoBehaviourPunCallbacks
 
     private void OnTriggerEnter(Collider other)
     {
-        if (pw.IsMine)
+        if (other.tag == "Ball")
         {
-            if (other.tag == "Ball")
-            {
-                top = other.gameObject;
-                touch = true;
-            }
+            top = other.gameObject;
+            touch = true;
         }
-        
+
     }
     private void OnTriggerExit(Collider other)
     {
-        if (pw.IsMine)
-        {
-            if (other.tag == "Ball")
+        if (other.tag == "Ball")
             {
                 touch = false;
             }
-        }
         
     }
 }

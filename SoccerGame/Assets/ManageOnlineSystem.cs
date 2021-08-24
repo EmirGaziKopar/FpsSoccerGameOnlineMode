@@ -31,15 +31,9 @@ public class ManageOnlineSystem : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Debug.Log("odaya girildi"); //odaya girildiði taktirde yapýlacaklar buraya yazýlýr
-
-        if (PhotonNetwork.CurrentRoom.PlayerCount == 2)
-        {
-            GameObject nesne2 = PhotonNetwork.Instantiate("Character", new Vector3(50, 4, 50), Quaternion.identity, 0, null); //nesneyi yükledik
-        }
-        else
-        {
-            GameObject nesne = PhotonNetwork.Instantiate("Character", new Vector3(50, 4, 160), Quaternion.identity, 0, null); //nesneyi yükledik
-        }
+        //PhotonNetwork.CurrentRoom.PlayerCount == 2
+        GameObject yeni_oyuncu = PhotonNetwork.Instantiate("Character", new Vector3(50f, 9f, 160f), Quaternion.identity, 0);
+        
 
         
     }

@@ -1187,7 +1187,7 @@ Transform:
   - {fileID: 1019256559}
   - {fileID: 1843236013}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &270305849
 GameObject:
@@ -4088,7 +4088,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &842566184
 GameObject:
@@ -4516,7 +4516,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &925203900
 GameObject:
@@ -4710,7 +4710,7 @@ Transform:
   - {fileID: 809937991}
   - {fileID: 1946866991}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &937057073
 GameObject:
@@ -4992,7 +4992,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 52.109, y: -183.712, z: 0.006}
 --- !u!114 &966230930
 MonoBehaviour:
@@ -5373,36 +5373,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.570881, y: 1.411933, z: 1.4873393}
   m_Center: {x: 0.07385326, y: -3.964332, z: -1.2913738}
---- !u!1 &1052876357
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1052876358}
-  m_Layer: 0
-  m_Name: Taraftar"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1052876358
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052876357}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 220.44896, y: 89.02812, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1060322284
 GameObject:
   m_ObjectHideFlags: 0
@@ -8989,7 +8959,7 @@ Transform:
   - {fileID: 718258297}
   - {fileID: 1791698636}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2113045803 stripped
 GameObject:
@@ -10484,6 +10454,10 @@ PrefabInstance:
     - target: {fileID: 6262306900312978459, guid: 1234a63eaac26db43aaffbb80821ad34, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6262306900312978460, guid: 1234a63eaac26db43aaffbb80821ad34, type: 3}
+      propertyPath: power
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6262306900312978460, guid: 1234a63eaac26db43aaffbb80821ad34, type: 3}
       propertyPath: santraPointer

@@ -9,11 +9,23 @@ public class BallPosition : MonoBehaviourPunCallbacks
     Santra santra;
     [SerializeField] GameObject santraPointer;
     Rigidbody ballbody;
+    PhotonView pw;
 
     private void Awake()
     {
+        pw = GetComponent<PhotonView>();
         santra = santraPointer.GetComponent<Santra>();
-        ballbody = GetComponent<Rigidbody>();
+        ballbody = pw.GetComponent<Rigidbody>();
+
+
+    }
+
+    private void Start()
+    {
+        if (!pw.IsMine)
+        {
+            Destroy(ballbody);
+        }
     }
     private void Update()
     {

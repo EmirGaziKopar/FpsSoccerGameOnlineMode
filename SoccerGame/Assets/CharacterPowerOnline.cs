@@ -83,25 +83,23 @@ public class CharacterPowerOnline : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (pw.IsMine)
-        {
+        
             if (other.tag == "Ball")
             {
                 top = other.gameObject;
                 touch = true;
             }
-        }
+        
         
     }
     private void OnTriggerExit(Collider other)
     {
-        if (pw.IsMine)
-        {
+        
             if (other.tag == "Ball")
             {
                 touch = false;
             }
-        }
+        
         
     }
 }
