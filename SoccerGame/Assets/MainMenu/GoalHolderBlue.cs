@@ -11,7 +11,7 @@ public class GoalHolderBlue : MonoBehaviour
     {
         if (other.tag == "Ball")
         {
-            BallPosition.isGoal = true;
+            BallPositionSingle.isGoal = true;
             mavitakimgol++;
             isBlueTeamScored = true;
             crowd_audio.Play();

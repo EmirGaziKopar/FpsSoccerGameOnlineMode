@@ -11,7 +11,7 @@ public class GoalHolderKirmizi : MonoBehaviour
     {
         if(other.tag == "Ball")
         {
-            BallPosition.isGoal = true;
+            BallPositionSingle.isGoal = true;
             kýrmýzýtakýmgol++;
         crowd_audio.Play();
             CrowdAnimation.goalControl = true;

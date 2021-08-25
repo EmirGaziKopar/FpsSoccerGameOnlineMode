@@ -11378,6 +11378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116c505fd03157443b5be7d4c48e5310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  santraPointer: {fileID: 972503880}
 --- !u!4 &4935241014974445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6267223292104103117, guid: 1234a63eaac26db43aaffbb80821ad34, type: 3}
@@ -12616,7 +12617,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4459864850153110562}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4459864850055355557}
@@ -12838,7 +12839,7 @@ MonoBehaviour:
   unlimitedSprint: 1
   sprintKey: 304
   sprintSpeed: 15
-  sprintDuration: 100
+  sprintDuration: 10
   sprintCooldown: 0.5
   sprintFOV: 80
   sprintFOVStepTime: 10
@@ -12858,7 +12859,7 @@ MonoBehaviour:
   speedReduction: 0.5
   enableHeadBob: 1
   joint: {fileID: 4459864850081385122}
-  bobSpeed: 10
+  bobSpeed: 0.001
   bobAmount: {x: 0.15, y: 0.05, z: 0}
 --- !u!114 &4459864851443963574
 MonoBehaviour:
