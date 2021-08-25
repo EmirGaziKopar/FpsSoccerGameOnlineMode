@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: -5320694868439188205}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -471,7 +471,7 @@ Transform:
   m_GameObject: {fileID: 6899698240366975041}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 50, y: 4, z: 160}
-  m_LocalScale: {x: 1, y: 0.6, z: 1}
+  m_LocalScale: {x: 1, y: 0.4, z: 1}
   m_Children:
   - {fileID: 6899698239214011479}
   - {fileID: 7071840596890710428}
@@ -610,8 +610,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9057198, y: 3.6597874, z: 1.6760406}
-  m_Center: {x: -0.031442642, y: -3.170107, z: 2.1579208}
+  m_Size: {x: 2.9057198, y: 3.6597872, z: 2.537918}
+  m_Center: {x: -0.031442642, y: -3.170107, z: 2.5888596}
 --- !u!65 &7071840595882467962
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1021,7 +1021,7 @@ MonoBehaviour:
   shoot_audio: {fileID: 0}
   dribbling_audio: {fileID: 0}
   power: 50
-  dribblingPower: 10
+  dribblingPower: 20
 --- !u!1 &6899698240527611518
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,20 +24,29 @@ public class CharacterPower : MonoBehaviourPunCallbacks
 
     public static bool isTouchBall;
 
-
+    
     private void Start()
     {
-
-        
         pw = GetComponent<PhotonView>();
-
+        if (pw.IsMine)
+        {
+            if (PhotonNetwork.IsMasterClient) //oyunu kuran
+            {
+                transform.position = new Vector3(50, 4, 160);
+            }
+            else
+            {
+                
+                transform.position = new Vector3(50, 4, 70);
+            }
+        }
         if (!pw.IsMine) //Ben deðilsem sil
         {
             Destroy(GetComponentInChildren<Camera>().gameObject);
         }
     }
 
-
+    [PunRPC]
     public void shoot()
     {
         sayac++;
@@ -49,6 +58,7 @@ public class CharacterPower : MonoBehaviourPunCallbacks
         //shoot_audio.Play();
     }
 
+    [PunRPC]
     public void dribbling()
     {
 
@@ -69,7 +79,7 @@ public class CharacterPower : MonoBehaviourPunCallbacks
 
             CrowdAnimation.goalControl = false;
             isTouchBall = true;
-            shoot();
+            GetComponent<PhotonView>().RPC("shoot",RpcTarget.All);
             
             Debug.Log("suuut ve gool");
             
@@ -80,7 +90,7 @@ public class CharacterPower : MonoBehaviourPunCallbacks
 
             CrowdAnimation.goalControl = false;
             isTouchBall = true;
-            dribbling();
+            GetComponent<PhotonView>().RPC("dribbling", RpcTarget.All);
             Debug.Log("O ne sürmek öyle");
         }
 
